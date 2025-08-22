@@ -19,7 +19,7 @@ images = soup.find_all("img")
 print(f"Found {len(images)} images.")
 
 if len(images) == 0:
-    print("⚠️ No images found on this page. Check if images are loaded by JavaScript.")
+    print(" No images found on this page. Check if images are loaded by JavaScript.")
 else:
     for i, img in enumerate(images):
         img_src = img.get("src")
@@ -38,5 +38,6 @@ else:
         with open(filename, "wb") as f:
             f.write(img_data)
 
-    print("✅ All images downloaded!")
+    print(" All images downloaded!")
+
 
